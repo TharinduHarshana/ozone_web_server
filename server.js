@@ -39,7 +39,7 @@ app.get('/', (req, res) => {
 
 app.use(
   cors({
-    origin:"https://ozonecomputer.vercel.app/",
+    origin: "*",
     methods: ["GET", "POST", "DELETE", "PUT"],
     allowedHeaders: [
       "Content-Type",
