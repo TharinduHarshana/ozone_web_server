@@ -23,11 +23,6 @@ mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("✅ Database connected"))
   .catch((err) => console.error("❌ DB connection error:", err));
 
-mongoose
-  .connect("db_url")
-  .then(() => console.log("MongoDB connected"))
-  .catch((error) => console.log(error));
-
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -40,7 +35,7 @@ app.get('/', (req, res) => {
 app.use(
   cors({
     origin: [
-      "https://ozone-web-front.vercel.app/", // Correct origin
+      "https://ozone-web-front.vercel.app", // Correct origin
       "https://vercel.com/tharinduharshanas-projects/ozone-web-front/HXCTNxZGcxWH9tbyRKkyNgG3sC5i",
        // Additional origin that needs to be allowed
     ],
