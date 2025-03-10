@@ -39,7 +39,11 @@ app.get('/', (req, res) => {
 
 app.use(
   cors({
-    origin: "*",
+    origin: [
+      "ozonecomputer-564g2rk5j-tharinduharshanas-projects.vercel.app", // Correct origin
+      "ozonecomputer.vercel.app",
+       // Additional origin that needs to be allowed
+    ],
     methods: ["GET", "POST", "DELETE", "PUT"],
     allowedHeaders: [
       "Content-Type",
